@@ -1,9 +1,9 @@
 // Sets important constants and variables
 const container = document.querySelector('.container');
 
-// Create a function to make Grid
+// add button
 
-//function createGrid() {
+
 
     // create rows function
     function createRows(rowNum) {
@@ -23,10 +23,17 @@ const container = document.querySelector('.container');
 
     function createColumns(row, colNum) {
         for (c = 0; c < colNum; c++) {
-            const cell = document.createElement('div');
+            let cell = document.createElement('div');
             cell.classList.add('cell');
             row.appendChild(cell);
+
+            cell.addEventListener("mouseover", () => {
+                cell.style.backgroundColor = "yellow";
+            });
+            
         }
+
+        
     
     }
 
@@ -43,4 +50,7 @@ function defaultGrid(rowNum, colNum) {
 
 defaultGrid();
 
-addEventListener("mouseover", (event) => {});
+// add mouseover event to 
+cell = document.querySelector('.cell');
+
+
