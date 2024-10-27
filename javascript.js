@@ -7,18 +7,26 @@ const container = document.querySelector('.container');
 
     // create rows function
     function createRows(rowNum) {
-        for (r = 0; r < 16; r++) {
+        for (r = 0; r < rowNum; r++) {
             const row = document.createElement('div');
-            row.innerText = r + 1;
+            row.classList.add('row');
+            // count number of rows
+       
+            createColumns(row, rowNum);
             container.appendChild(row);
+            
         }
     }
 
     
     // create columns
 
-    function createColumns(colNum) {
-        
+    function createColumns(row, colNum) {
+        for (c = 0; c < colNum; c++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            row.appendChild(cell);
+        }
     
     }
 
@@ -33,4 +41,6 @@ function defaultGrid(rowNum, colNum) {
 
 // call function
 
-createRows(16);
+defaultGrid();
+
+addEventListener("mouseover", (event) => {});
