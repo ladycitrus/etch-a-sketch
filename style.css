@@ -2,5 +2,30 @@
     background-color: rgb(174, 174, 192);
     padding: 25px;
     display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
 }
+
+.cell {
+    flex: 1;
+    border: .5px solid black;
+
+    
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    align-self: center;
+    margin-bottom: 10px;
+    
+}
+
 
